@@ -4,9 +4,9 @@ context('Module Grid', function()
 	before(function()
 		Grid = require ('jumper.grid')
 		Node = require ('jumper.core.node')
-  end)
+	end)
 	
-  context('Grid:new() or Grid() returns a new Grid object', function()
+	context('Grid:new() or Grid() returns a new Grid object', function()
 		
 		test('Grid:new() or Grid() returns a new Grid object', function()
 			assert_equal(getmetatable(getmetatable(Grid:new({{0}}))),Grid)
@@ -197,7 +197,7 @@ context('Module Grid', function()
 					{0,0,0,0},
 				}
 				grid = Grid(map)
-      end)
+			end)
 			
 			test('returns the node at a given position', function()
 				local node = grid:getNodeAt(1,1)

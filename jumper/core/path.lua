@@ -7,7 +7,7 @@
 --
 
 
-if (...) then
+if not (...) then
 	return
 end
 

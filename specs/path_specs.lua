@@ -4,16 +4,16 @@ context('Module Path', function()
 	before(function()
 		Path = require ('jumper.core.path')
 		Node = require ('jumper.core.node')
-  end)
+	end)
 	
-  context('The Path Class', function()
+	context('The Path Class', function()
 	
-    test('Path:new() or Path() returns a Path object',function()
+		test('Path:new() or Path() returns a Path object',function()
 			assert_equal(getmetatable(Path:new()),Path)
 			assert_equal(getmetatable(Path()),Path)
-    end)
+		end)
 		
-    test('Path:iter() iterates on nodes forming the path',function()
+		test('Path:iter() iterates on nodes forming the path',function()
 			local p = Path()
 			for i = 1,10 do p._nodes[#p._nodes+1] = Node(i,i) end
 			
@@ -25,7 +25,7 @@ context('Module Path', function()
 				assert_equal(node._y, i)
 				assert_equal(count, i)
 			end
-    end)		
+		end)		
 		
 		test('Path:iter() is aliased as Path:nodes()',function()
 			assert_equal(Path.iter, Path.nodes)
@@ -95,6 +95,6 @@ context('Module Path', function()
 			assert_less_than(p:getLength()-len,1e-6)			
 		end)		
 		
-  end)
+	end)
 
 end)

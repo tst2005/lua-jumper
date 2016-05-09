@@ -4,13 +4,13 @@ context('Module Heuristics', function()
 	before(function()
 		H = require ('jumper.core.heuristics')
 		Node = require ('jumper.core.node')
-  end)
+	end)
 	
-  context('MANHATTAN distance', function()
+	context('MANHATTAN distance', function()
 	
-    test('is a function',function()
+		test('is a function',function()
 			assert_type(H.MANHATTAN, 'function')
-    end)
+		end)
 	
 		test('evaluates as |dx|+|dy|', function()
 			assert_equal(H.MANHATTAN(Node(0,0), Node(0,0)), 0)
@@ -26,13 +26,13 @@ context('Module Heuristics', function()
 			assert_error(pcall(H.MANHATTAN))
 		end)		
 		
-  end)
+	end)
 
-  context('EUCLIDIAN distance', function()
+	context('EUCLIDIAN distance', function()
 	
-    test('is a function',function()
+		test('is a function',function()
 			assert_type(H.EUCLIDIAN, 'function')
-    end)
+		end)
 	
 		test('evaluates as SQUAREROOT(dx*dx + dy*dy)', function()
 			assert_equal(H.EUCLIDIAN(Node(0,0), Node(0,0)), 0)
@@ -48,13 +48,13 @@ context('Module Heuristics', function()
 			assert_error(pcall(H.EUCLIDIAN))
 		end)		
 		
-  end)
-  
+	end)
+	
 	context('DIAGONAL distance', function()
 	
-    test('is a function',function()
+		test('is a function',function()
 			assert_type(H.DIAGONAL, 'function')
-    end)
+		end)
 	
 		test('evaluates as MAX(|dx|+|dy|)', function()
 			assert_equal(H.DIAGONAL(Node(0,0), Node(0,0)), 0)
@@ -71,13 +71,13 @@ context('Module Heuristics', function()
 			assert_error(pcall(H.DIAGONAL))
 		end)		
 		
-  end)
+	end)
 
 	context('CARDINTCARD distance', function()
 	
-    test('is a function',function()
+		test('is a function',function()
 			assert_type(H.CARDINTCARD, 'function')
-    end)
+		end)
 		
 		test('evaluates as (SQRT(2)-1)*MIN(|dx|+|dy|)+MAX(|dx|+|dy|)', function()
 			assert_equal(H.CARDINTCARD(Node(0,0), Node(0,0)), 0)
@@ -95,6 +95,6 @@ context('Module Heuristics', function()
 			assert_error(pcall(H.CARDINTCARD))
 		end)		
 		
-  end)
+	end)
 	
 end)

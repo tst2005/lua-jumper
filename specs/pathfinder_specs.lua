@@ -8,9 +8,9 @@ context('Module Pathfinder', function()
 		Path = require ('jumper.core.path')
 		map = {{0,0,0},{0,0,0},{0,0,0}}
 		grid = Grid(map)
-  end)
+	end)
 	
-  context('Pathfinder:new() or Pathfinder()', function()
+	context('Pathfinder:new() or Pathfinder()', function()
 		
 		test('Inits a new Pathfinder object', function()
 			assert_equal(getmetatable(PF(grid, 'ASTAR')), PF)

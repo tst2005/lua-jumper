@@ -3,14 +3,14 @@ context('Module Node', function()
 	
 	before(function()
 		Node = require ('jumper.core.node')
-  end)
+	end)
 	
-  context('The Node Class', function()
+	context('The Node Class', function()
 	
-    test('Node:new() or Node() returns a Node object',function()
+		test('Node:new() or Node() returns a Node object',function()
 			assert_equal(getmetatable(Node:new(0,0)),Node)
 			assert_equal(getmetatable(Node(0,0)),Node)
-    end)
+		end)
 	
 		test('A Node has x and y attributes', function()
 			local node = Node:new(1,3)
@@ -29,7 +29,7 @@ context('Module Node', function()
 		end)		
 		
 		test('Nodes can be compared, if they both have an F-cost', function()
-		  local nodeA, nodeB = Node(1,2), Node(1,2)
+			local nodeA, nodeB = Node(1,2), Node(1,2)
 			nodeA._f, nodeB._f = 1, 2
 			assert_less_than(nodeA, nodeB)
 			
@@ -37,6 +37,6 @@ context('Module Node', function()
 			assert_less_than(nodeB, nodeA)
 		end)	
 		
-  end)
+	end)
 
 end)

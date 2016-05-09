@@ -1,6 +1,6 @@
 -- Various utilities for Jumper top-level modules
 
-if (...) then
+if not (...) then
 	return
 end
 

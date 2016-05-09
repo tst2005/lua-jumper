@@ -4,11 +4,11 @@ local Grid = require ("jumper.grid")
 local Pathfinder = require ("jumper.pathfinder")
 
 local map = {
-  {0,0,0,0,0,0},
-  {0,0,0,0,0,0},
-  {0,1,1,1,1,0},
-  {0,0,0,0,0,0},
-  {0,0,0,0,0,0},
+	{0,0,0,0,0,0},
+	{0,0,0,0,0,0},
+	{0,1,1,1,1,0},
+	{0,0,0,0,0,0},
+	{0,0,0,0,0,0},
 }
 
 local walkable = 0
@@ -29,7 +29,7 @@ myFinder:setHeuristic(h)
 
 local p = myFinder:getPath(1,1, 6,5)
 for node, count in p:nodes() do
-  print(('%d. Node(%d,%d)'):format(count, node:getX(), node:getY()))
+	print(('%d. Node(%d,%d)'):format(count, node:getX(), node:getY()))
 end
 print(('Path length: %.2f'):format(p:getLength()))
 

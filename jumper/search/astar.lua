@@ -5,6 +5,7 @@
 if not (...) then
 	return
 end
+
 -- Internalization
 local ipairs = ipairs
 local huge = math.huge
